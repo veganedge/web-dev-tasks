@@ -1,139 +1,300 @@
+<!-- Looking at it now, I see I added classes or ID's with all types of notation... some like "newClass", "new_class", and even "new-class"    Idea of what is standard?-->
+
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Dev Tasks</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Tasks needing to be completed to become web developer">
+    <meta name="author" content="Scott Brown">
     <link rel="stylesheet" href="stylesheet.css">
   </head>
+
   <body>
     <nav id="navbar">
       <header class="navbar_header"><h1>Web Dev Tasks</h1></header>
-      <ul class="navigation">
-        <li><a href=#udemy_course class="nav-link"><h3>Udemy Course</h3></a></li>
-        <li><a href=#certifications class="nav-link"><h3>Certifications</h3></a></li>
-        <li><a href=#emily_novel_site class="nav-link"><h3>Emily Novel Site</h3></a></li>
-        <li><a href=#e_l_b_gallery class="nav-link"><h3>E L B Gallery</h3></a></li>
-        <li><a href=#e_l_brown_hub class="nav-link"><h3>E L Brown Hub</h3></a></li>
-        <li><a href=#movie_buds class="nav-link"><h3>Movie Buds</h3></a></li>
+      <ul id="navigation" class="navigation">
+        <!-- check this section in CSS file. Should I do a class of navigation (shown here) instead of the #navbar li? Like is it better to take out this class and leave the CSS the way it is? Or change the CSS from #navbar li to .nav-link? -->
+        <li>
+          <input type="checkbox">
+          <label><a href=#udemy_course class="nav-link" tabindex="1"><h3>Udemy Course</h3></a></label>
+        </li>
+        <li>
+          <input type="checkbox">
+          <label><a href=#certifications class="nav-link"><h3>Certifications</h3></a></label>
+        </li>
+        <li>
+          <input type="checkbox">
+          <label><a href=#emily_novel_site class="nav-link"><h3>Emily Novel Site</h3></a></label>
+        </li>
+        <li>
+          <input type="checkbox">
+          <label><a href=#e_l_b_gallery class="nav-link"><h3>E L B Gallery</h3></a></label>
+        </li>
+        <li>
+          <input type="checkbox">
+          <label><a href=#e_l_brown_hub class="nav-link"><h3>E L Brown Hub</h3></a></label>
+        </li>
+        <li>
+          <input type="checkbox">
+          <label><a href=#movie_buds class="nav-link"><h3>Movie Buds</h3></a></label>
+        </li>
+      </ul>
+      <ul class="add-categories">
+        <li class="add-category-input">
+          <input type="text" id="inputCategory" class="input-category" placeholder="category title">
+          <button id="addCategory" class="add-category">Add Category</button>
+        </li>
+        <!-- want to be able to delete categories-->
       </ul>
     </nav>
+
     <main id="main-doc">
+
       <section class="main-section" id="udemy_course">
-        <header>Udemy Course</header>
+        <header class="section-header">Udemy Course</header>
         <p>Finish taking the Udemy course "The Complete Web Developer - Zero to Mastery"</p>
-        <ul class="main_content_list">
-          <li>Javascript</li>
-          <li>Git and Github</li>
-          <li>Redux and React</li>
-          <li>API</li>
-          <li>Node.js</li>
+        <ul id="udemyCourse" class="main_content_list">
+          <li>
+            <input type="checkbox">
+            <label>HTML</label>
+          </li>
+          <li>
+            <input type="checkbox">
+            <label>CSS</label>
+          </li>
+          <li>
+            <input type="checkbox">
+            <label>Javascript</label>
+          </li>
+          <li>
+            <input type="checkbox">
+            <label>Git and Github</label>
+          </li>
+          <li>
+            <input type="checkbox">
+            <label>Redux and React</label>
+          </li>
+          <li>
+            <input type="checkbox">
+            <label>API</label>
+          </li>
+          <li>
+            <input type="checkbox">
+            <label>Node.js</label>
+          </li>
         </ul>
-        <code></code>
-        <p></p>
+        <ul class="add-tasks">
+          <li class="add-task-input">
+            <input type="text" id="inputTask" class="input-task" placeholder="task title">
+            <button id="addTask" class="add-task">Add Task</button>
+          </li>
+          <!-- want to be able to delete tasks--> 
+          <!-- this might be better as "edit" should be able to add/delete main tasks in this category, but also sub-tasks-->
+        </ul>
       </section>
       <hr>
+
       <section class="main-section" id="certifications">
-        <header>Certifications</header>
+        <header class="section-header">Certifications</header>
         <p>Finish all freecodecamp.org coding certifications</p>
-        <code></code>
         <ul class="main_content_list">
-          <li>Responsive Web Design</li>
-          <li>Javascript Algorithms and Data Structures</li>
-          <li>Front End Libraries</li>
-          <li>Data Visualization</li>
-          <li>API's and Microservices</li>
-          <li>Quality Assurance</li>
-          <li>Scientific Computing with Python</li>
-          <li>Data Analysis with Python</li>
-          <li>Information Security</li>
-          <li>Machine Learning with Python</li>
-          <li>Coding Interview Prep</li>
+          <li>
+            <input type="checkbox">
+            <label>Responsive Web Design</label>
+          </li>
+          <li>
+            <input type="checkbox">
+            <label>Javascript Algorithms and Data Structures</label>
+          </li>
+          <li>
+            <input type="checkbox">
+            <label>Front End Libraries</label>
+          </li>
+          <li>
+            <input type="checkbox">
+            <label>Data Visualization</label>
+          </li>
+          <li>
+            <input type="checkbox">
+            <label>API's and Microservices</label>
+          </li>
+          <li>
+            <input type="checkbox">
+            <label>Quality Assurance</label>
+          </li>
+          <li>
+            <input type="checkbox">
+            <label>Scientific Computing with Python</label>
+          </li>
+          <li>
+            <input type="checkbox">
+            <label>Data Analysis with Python</label>
+          </li>
+          <li>
+            <input type="checkbox">
+            <label>Information Security</label>
+          </li>
+          <li>
+            <input type="checkbox">
+            <label>Machine Learning with Python</label>
+          </li>
+          <li>
+            <input type="checkbox">
+            <label>Coding Interview Prep</label>
+          </li>
+          <li class="add-task-input">
+             <!-- get this button to add tasks-->
+            <input type="text" class="input-task" placeholder="task title">
+            <button class="add-task">Add Task</button>
+          </li>
+          <!-- want to be able to delete items-->
+          <!-- this might be better as "edit" should be able to add/delete main tasks in this category, but also sub-tasks-->
         </ul>
-        <p></p>
       </section>
       <hr>
+
       <section class="main-section" id="emily_novel_site">
-        <header>Emily Novel Site</header>
+        <header class="section-header">Emily Novel Site</header>
         <p>Develop it more</p>
         <ul class="main_content_list">
-          <li>Logo on top left?</li>
-          <li>Needs hero image</li>
-          <li>Footer links connect to more pages</li>
-          <li>Better design of Excerpt</li>
-          <li>Author photo</li>
-          <li>Presale button connects</li>
+          <li>
+            <input type="checkbox">
+            <label>Logo on top left?</label>
+          </li>
+          <li>
+            <input type="checkbox">
+            <label>Needs hero image</label>
+          </li>
+          <li>
+            <input type="checkbox">
+            <label>Footer links connect to more pages</label>
+          </li>
+          <li>
+            <input type="checkbox">
+            <label>Better design of Excerpt</label>
+          </li>
+          <li>
+            <input type="checkbox">
+            <label>Author photo</label>
+          </li>
+          <li>
+            <input type="checkbox">
+            <label>Presale button connects</label>
+          </li>
+          <li class="add-task-input">
+            <!-- get this button to add tasks-->
+            <input type="text" class="input-task" placeholder="task title">
+            <button class="add-task">Add Task</button>
+          </li>
+          <!-- want to be able to delete items-->
+          <!-- this might be better as "edit" should be able to add/delete main tasks in this category, but also sub-tasks-->
         </ul>
-        <code></code>
-        <p></p>
       </section>
       <hr>
+
       <section class="main-section" id="e_l_b_gallery">
-        <header>E L B Gallery</header>
+        <header class="section-header">E L B Gallery</header>
         <p>Website/webpage portfolio</p>
         <ul class="main_content_list">
-          <li>Nav at top?
-            <ul>
+          <li>
+            <input type="checkbox">
+            <label>Nav at top?</label>
+            <ul class="sub-list">
               <li>Available works</li>
               <li>Previous works</li>
               <li>Process</li>
               <li>Request a commission</li>
             </ul>
           </li>
-          <li>cover photo/overlayed text top 30%</li>
-          <li>grid of photo cards bottom 70%
-            <ul>
+          <li>
+            <input type="checkbox">
+            <label>cover photo/overlayed text top 30%</label>
+          </li>
+          <li>
+            <input type="checkbox">
+            <label>grid of photo cards bottom 70%</label>
+            <ul class="sub-list">
               <li>4-5 across</li>
               <li>tilt 7 degrees on hover</li>
               <li>on click: larger photo/description</li>
             </ul>
           </li>
-          <li>Footer
-            <ul>
+          <li>
+            <input type="checkbox">
+            <label>Footer</label>
+            <ul class="sub-list">
               <li>Copywrite</li>
               <li>Artist CV</li>
             </ul>
-          </li>  
+          </li>
+          <li class="add-task-input">
+            <!-- get this button to add tasks-->
+            <input type="text" class="input-task" placeholder="task title">
+            <button class="add-task">Add Task</button>
+          </li>
+          <!-- want to be able to delete items-->
+          <!-- this might be better as "edit" should be able to add/delete main tasks in this category, but also sub-tasks-->
         </ul>        
-        <code></code>
-        <p></p>
       </section>
       <hr>
+
       <section class="main-section" id="e_l_brown_hub">
-        <header>E L Brown Hub</header>
+        <header class="section-header">E L Brown Hub</header>
         <p>This should be a landing site for all Emily Brown projects/sites</p>
-        <code></code>
         <p>Design</p>
         <ul class="main_content_list">
-          <li>Hero pic background?</li>
-          <li>3 columns with
-            <ul>
+          <li>
+            <input type="checkbox">
+            <label>Hero pic background?</label>
+          </li>
+          <li>
+            <input type="checkbox">
+            <label>3 columns with:</label>
+            <ul class="sub-list">
               <li>logos/icons</li>
               <li>quick info</li>
+              <li>socials</li>
             </ul>
-          </li>  
-          <li>socials under each</li>
+          </li>
+          <li class="add-task-input">
+             <!-- get this button to add tasks-->
+             <input type="text" class="input-task" placeholder="task title">
+             <button class="add-task">Add Task</button>
+          </li>
+          <!-- want to be able to delete items-->
+          <!-- this might be better as "edit" should be able to add/delete main tasks in this category, but also sub-tasks-->
         </ul>
       </section>
       <hr>
+
       <section class="main-section" id="movie_buds">
-        <header>Movie Buds</header>
+        <header class="section-header">Movie Buds</header>
         <ul class="main_content_list">
-          <li>Setup framework
-            <ul>
-              <li>Animated image/logo</li>
-              <li>Nav
-                <ul>
+          <li>
+            <input type="checkbox">
+            <label>Setup framework</label>
+            <ul class="movie-buds-sub-list">
+              <li>
+                <input type="checkbox">
+                <label>Animated image/logo</label>
+              </li>
+              <li>
+                <input type="checkbox">
+                <label>Nav</label>
+                <ul class="sub-list">
                   <li>Register/signup</li>
                   <li>How It Works</li>
                   <li>Suggest to a friend</li>
                   <li>Update Feed??</li>
                 </ul>
               </li>
-              <li>Footer
-                <ul>
+              <li>
+                <input type="checkbox">
+                <label>Footer</label>
+                <ul class="sub-list">
                   <li>Privacy</li>
                   <li>Contact</li>
                   <li>Sitemap</li>
@@ -141,15 +302,37 @@
               </li>  
             </ul>
           </li>
-          <li>Color scheme</li>
-          <li>Movie Database</li>
-          <li>Matching/List Algorithms</li>
-          <li>Marketing Ideas</li>
-          <li>Cost/Budget</li>
+          <li>
+            <input type="checkbox">
+            <label>Color scheme</label>
+          </li>
+          <li>
+            <input type="checkbox">
+            <label>Movie Database</label>
+          </li>
+          <li>
+            <input type="checkbox">
+            <label>Matching/List Algorithms</label>
+          </li>
+          <li>
+            <input type="checkbox">
+            <label>Marketing Ideas</label>
+          </li>
+          <li>
+            <input type="checkbox">
+            <label>Cost/Budget</label>
+          </li>
+          <li class="add-task-input">
+            <!-- get this button to add tasks-->
+            <input type="text" class="input-task" placeholder="task title">
+            <button class="add-task">Add Task</button>
+          </li>
+          <!-- want to be able to delete items-->
+          <!-- this might be better as "edit" should be able to add/delete main tasks in this category, but also sub-tasks-->
         </ul>
-        <code></code>
-        <p></p>
       </section>
+
     </main>
+    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
