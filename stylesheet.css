@@ -43,7 +43,11 @@
   display: block;
 }
 
+<<<<<<< HEAD
 /* maybe change it to stay white on click? Better yet, when viewing that section */
+=======
+/* maybe change it to stay white on click? */
+>>>>>>> f34de3a671d4922d2bea6c33d6386ff340707a33
 .navigation a:hover {
   color: #f1f1f1;
 }

@@ -126,4 +126,9 @@ inputTask.addEventListener("keypress", addTaskAfterKeypress)
 
 
 
+<<<<<<< HEAD
 /* more ideas *// ultimately have it remember the user and changes, so when re-visited it is up to date.
+=======
+/* more ideas */
+// ultimately have it remember the user and changes, so when re-visited it is up to date.
+>>>>>>> f34de3a671d4922d2bea6c33d6386ff340707a33
