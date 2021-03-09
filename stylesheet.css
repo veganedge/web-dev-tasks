@@ -43,7 +43,7 @@
   display: block;
 }
 
-/* maybe change it to stay white on click? */
+/* maybe change it to stay white on click? Better yet, when viewing that section */
 .navigation a:hover {
   color: #f1f1f1;
 }
