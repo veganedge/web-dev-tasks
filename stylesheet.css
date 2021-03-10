@@ -67,6 +67,10 @@ input[type="checkbox"]:checked ~ ul {
   color: lightgrey;
 } 
 
+/*=======================================
+need to code when checkbox is clicked, it clicks submenu checkboxes
+=========================================*/
+
 input[type="checkbox"]:hover {
   cursor:pointer;
 }

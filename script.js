@@ -43,22 +43,25 @@ function addCategoryAfterKeypress(event) {
 buttonCategory.addEventListener("click", addCategoryAfterClick)
 inputCategory.addEventListener("keypress", addCategoryAfterKeypress)
 
+/*===============================================================
 /*  1. still need to also have it add label, anchor tag, h3, and stylized the same way as the rest */
 /*      -I believe I need to make the itemCategory "h3" instead of "li", then append that as a child of the "a", append THAT as a child of the "label", append THAT as a child of the "input", append that as a child of the "li"
 /*  2. need to make it show the new category on right menu with an input and button to add tasks to it */
 /*  3. want to make it so when you mark off the category, it checks all the task boxes of that category (in effect marking every task done) */
-/*      -ROUGH IDEA - would need to figure out how to select probably using a for loop again, or have to make a different class name for each category/task button, then somehow make it make a new function for select all when a user inputs a new category  
+/*      -ROUGH IDEA - would need to figure out how to select probably using FOR LOOP again, or have to make a different class name for each category/task button, then somehow make it make a new function for select all when a user inputs a new category  
+/*===============================================================
 
 const checkboxCategory = document.getElementsByClassName("checkboxCategory")
 const checkboxTask = document.getElementsByClassName("checkboxTask")
 
-function selectAllChildCheckboxes() {
+function selectCategoryChildCheckboxes() {
     if (checkboxCategory = "selected") {
-        checkboxTask = "selected"
+        checkboxTask = "selected";
     }
 }
 
-checkboxCategory.addEventListener("click", selectAllChildCheckboxes)
+checkboxCategory.addEventListener("click", selectCategoryChildCheckboxes)
+
 */
  
 
@@ -111,16 +114,28 @@ function addTaskAfterKeypress(event) {
     }
 }
 
-/*  1. still need to also have it add label, anchor tag, h3, and stylized the same way as the rest */
-/*      -I believe I need to make the itemCategory "h3" instead of "li", then append that as a child of the "a", append THAT as a child of the "label", append THAT as a child of the "input", append that as a child of the "li" */
-
-
 buttonTask.addEventListener("click", addTaskAfterClick)
 inputTask.addEventListener("keypress", addTaskAfterKeypress)
 
+/*=============================================================
+/*  1. still need to also have it add label, anchor tag, h3, and stylized the same way as the rest */
+/*      -I believe I need to make the itemCategory "h3" instead of "li", then append that as a child of the "a", append THAT as a child of the "label", append THAT as a child of the "input", append that as a child of the "li" */
+/*  2. want to make it so when a Task is checked, it automatically checks the CHILD checkboxes of Task. This relates to #3 in categories.*/ 
+/*==================================================================
+
+checkboxTask is defined above in categories
+
+function selectTaskChildCheckboxes() {
+    if (checkboxTask = "selected") {
+        checkboxTask:child = "selected";
+    }
+}
+
+checkboxTask.addEventListener("click", selectTaskChildCheckboxes)
+
+
+
 /* end of adding tasks (right menu) */
-
-
 
 
 /* more ideas */
