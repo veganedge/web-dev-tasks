@@ -1,18 +1,16 @@
 /* start of adding categories (left menu) */
 
-var buttonCategory = document.getElementById("addCategory");
-var inputCategory = document.getElementById("inputCategory");
-var listCategory = document.getElementById("navigation");
+const buttonCategory = document.getElementById("addCategory");
+const inputCategory = document.getElementById("inputCategory");
+const listCategory = document.getElementById("navigation");
 
 
 /* calculates if there is user input */
-function inputCategoryLength() {
-    return inputCategory.value.length;
-}
+const inputCategoryLength = () => inputCategory.value.length;
 
 /* adds user input category to the left menu */
 function createItemCategory() {
-    var itemCategory = document.createElement("li");
+    const itemCategory = document.createElement("li");
     itemCategory.appendChild(document.createTextNode(inputCategory.value));
     listCategory.appendChild(itemCategory);
     inputCategory.value = "";
@@ -21,7 +19,7 @@ function createItemCategory() {
 
 /* adds checkbox to newly created input category */
 function createCheckboxCategory(itemCategory) {
-    var chkbx = document.createElement("input");
+    const chkbx = document.createElement("input");
     chkbx.setAttribute("type", "checkbox");
     chkbx.appendChild(document.createTextNode(""));
     itemCategory.appendChild(chkbx);
@@ -30,7 +28,7 @@ function createCheckboxCategory(itemCategory) {
 /* runs the above functions on clicking button */
 function addCategoryAfterClick() {
     if (inputCategoryLength() > 0) {
-      var newItemCategory = createItemCategory();
+      const newItemCategory = createItemCategory();
       createCheckboxCategory(newItemCategory);
     }
 }
@@ -51,8 +49,8 @@ inputCategory.addEventListener("keypress", addCategoryAfterKeypress)
 /*  3. want to make it so when you mark off the category, it checks all the task boxes of that category (in effect marking every task done) */
 /*      -ROUGH IDEA - would need to figure out how to select probably using a for loop again, or have to make a different class name for each category/task button, then somehow make it make a new function for select all when a user inputs a new category  
 
-var checkboxCategory = document.getElementsByClassName("checkboxCategory")
-var checkboxTask = document.getElementsByClassName("checkboxTask")
+const checkboxCategory = document.getElementsByClassName("checkboxCategory")
+const checkboxTask = document.getElementsByClassName("checkboxTask")
 
 function selectAllChildCheckboxes() {
     if (checkboxCategory = "selected") {
@@ -73,19 +71,17 @@ checkboxCategory.addEventListener("click", selectAllChildCheckboxes)
 
 /* start of adding tasks (right menu) */
 
-var buttonTask = document.getElementById("addTask");
-var inputTask = document.getElementById("inputTask");
-var listTask = document.getElementById("udemyCourse");
+const buttonTask = document.getElementById("addTask");
+const inputTask = document.getElementById("inputTask");
+const listTask = document.getElementById("udemyCourse");
 
 
 /* calculates if there is user input */
-function inputTaskLength() {
-    return inputTask.value.length;
-}
+const inputTaskLength = () => inputTask.value.length;
 
 /* adds user input task to the category */
 function createItemTask() {
-    var itemTask = document.createElement("li");
+    const itemTask = document.createElement("li");
     itemTask.appendChild(document.createTextNode(inputTask.value));
     listTask.appendChild(itemTask);
     inputTask.value = "";
@@ -94,7 +90,7 @@ function createItemTask() {
 
 /* adds checkbox to newly created input category */
 function createCheckboxTask(itemTask) {
-    var chkbx2 = document.createElement("input");
+    const chkbx2 = document.createElement("input");
     chkbx2.setAttribute("type", "checkbox");
     chkbx2.appendChild(document.createTextNode(""));
     itemTask.appendChild(chkbx2);
@@ -103,7 +99,7 @@ function createCheckboxTask(itemTask) {
 /* if no user input, then no action */
 function addTaskAfterClick() {
     if (inputTaskLength() > 0) {
-        var newItemTask = createItemTask();
+        const newItemTask = createItemTask();
         createCheckboxTask(newItemTask);
     }
 }
@@ -123,6 +119,7 @@ buttonTask.addEventListener("click", addTaskAfterClick)
 inputTask.addEventListener("keypress", addTaskAfterKeypress)
 
 /* end of adding tasks (right menu) */
+
 
 
 

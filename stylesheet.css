@@ -10,6 +10,9 @@
   border-right: solid 4px black;
   overflow-x: hidden; /* Disable horizontal scroll */
 }
+/* =====================================================================
+still need to change width when tiny screen, when #navbar is stacked on top of #main-doc it's aligned weird
+========================================================================*/
 
 @media screen and (max-height: 450px) {
   #navbar {padding-top: 15px;}
@@ -42,8 +45,9 @@
   color: black;
   display: block;
 }
-
-/* maybe change it to stay white on click? Better yet, when viewing that section */
+/*==============================================================
+maybe change it to stay white on click? Better yet, when viewing that section
+================================================================= */
 .navigation a:hover {
   color: #f1f1f1;
 }
@@ -52,10 +56,16 @@ label {
   display:inline-block;
 }
 
-input[type="checkbox"]:checked + label{
+/* strikethrough task when checkbox is clicked */
+input[type="checkbox"]:checked + label {
   text-decoration: line-through;
   color: lightgrey;
 }
+/* strikethrough the submenu when main task is checked */
+input[type="checkbox"]:checked ~ ul {
+  text-decoration: line-through;
+  color: lightgrey;
+} 
 
 input[type="checkbox"]:hover {
   cursor:pointer;
@@ -73,6 +83,10 @@ h3 {
 .add-category-input {
   padding: 32px 8px 4px 0px;
 }
+
+/* =====================================================================
+still need to change width when tiny screen, when #navbar is stacked on top of #main-doc it's aligned weird
+========================================================================*/
 
 #main-doc {
   font-size: 2em;
@@ -113,10 +127,11 @@ hr {
   list-style-type: none;
 }
 
-
-/* want to test greying out the category from left menu too, but didn't work with ul, li, label, a, or h3 
+/* ========================================================
+want to test greying out the category from left menu too, but didn't work with ul, li, label, a, or h3 
 
 input[type="checkbox"]:checked + li{
   color:lightgrey;
 }
-*/
+
+==========================================================*/
